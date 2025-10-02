@@ -10,7 +10,7 @@
  </script>
 </head>
 
-# VPF-ADTP: A Virtual-Physical Fusion Autonomous Driving \\Testing Platform
+# VPF-ADTP: A Virtual-Physical Fusion Autonomous Driving Testing Platform
 
 **[Yiming Cui](https://tops.tongji.edu.cn/info/1131/1818.htm)**, [Shiyu Fang](https://tops.tongji.edu.cn/info/1033/1190.htm), [Jiarui Zhang](https://tops.tongji.edu.cn/info/1132/1815.htm),[Yan Huang](https://tops.tongji.edu.cn/info/1033/1189.htm), [Peng Hang](https://tops.tongji.edu.cn/info/1031/1383.htm), [Jian Sun](https://tops.tongji.edu.cn/info/1031/1187.htm)  
 
@@ -31,7 +31,7 @@ The key contributions of our work are summarized as follows:
 2. It integrates multiple types of physical and virtual components while supporting flexible combinations of virtual-physical elements, thereby fulfilling diverse functional testing requirements.
 3. A public evaluation service platform is established with standardized assessment procedures and openly accessible evaluation services, enabling diagnostic analysis and horizontal/vertical comparison of algorithms to provide evidence for algorithmic improvements.
 
-![framework](./Figs/Framework-v3.pdf)
+<iframe src="./Files/Framework-v3.pdf" width="100%" height="600px"></iframe>
 
 ## Platform Framework
 
@@ -43,6 +43,11 @@ From a scenario perspective, the physical test site is equipped with various lay
 
 From a test-element perspective, the virtual environment can provide controllable virtual background traffic flows, virtual CAVs, and remote-driven HVs, each functionally corresponding to physical CAVs of different automation levels, human-driven HVs, and cloud-controlled intelligent targets in the physical environment. This comprehensive set of traffic participants for autonomous vehicle testing can be flexibly combined to support single-vehicle and multi-vehicle testing. In addition, the physical environment is equipped with roadside infrastructure to support V2I testing requirements.
 By integrating vehicle information from both virtual and physical environments, the virtual–physical fusion testing platform enables information transmission and dynamic interaction between virtual–virtual, virtual–physical, and physical–physical vehicles, thereby creating an authentic and credible testing environment.
+
+<div align="center">
+  <img src="./Figs/Workflow.png" alt="示意图" width="400">
+  <p>Data transmission pipeline of the VPF-ADTP</p>
+</div>
 
 ### Platform Capabilities
 
