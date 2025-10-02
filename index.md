@@ -31,7 +31,7 @@ The key contributions of our work are summarized as follows:
 2. It integrates multiple types of physical and virtual components while supporting flexible combinations of virtual-physical elements, thereby fulfilling diverse functional testing requirements.
 3. A public evaluation service platform is established with standardized assessment procedures and openly accessible evaluation services, enabling diagnostic analysis and horizontal/vertical comparison of algorithms to provide evidence for algorithmic improvements.
 
-<iframe src="./Files/Framework-v3.pdf" width="100%" height="600px"></iframe>
+<iframe src="./Figs/Framework-v3.pdf" width="100%" height="600px"></iframe>
 
 ## Platform Framework
 
@@ -45,7 +45,7 @@ From a test-element perspective, the virtual environment can provide controllabl
 By integrating vehicle information from both virtual and physical environments, the virtual–physical fusion testing platform enables information transmission and dynamic interaction between virtual–virtual, virtual–physical, and physical–physical vehicles, thereby creating an authentic and credible testing environment.
 
 <div align="center">
-  <img src="./Figs/Workflow.png" alt="示意图" width="400">
+  <img src="./Figs/Workflow.png" alt="示意图" width="750">
   <p>Data transmission pipeline of the VPF-ADTP</p>
 </div>
 
