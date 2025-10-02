@@ -63,14 +63,27 @@ Adversarial testing is a methodology designed to evaluate the performance of the
 However, a notable limitation of existing research is its predominant reliance on purely simulated environments, with a lack of application and validation on real-world vehicle platforms and in physical test conditions. 
 Due to the nature of adversarial testing, which explores the boundary of vehicle capabilities, real-world field tests inherently carry certain safety risks. To address this gap, this study incorporates adversarial testing capabilities within the virtual–physical fusion testing platform, fully leveraging both virtual and physical vehicles as adversaries to construct realistic, safe, and efficient adversarial environments.
 
-<div align=center>
-| <video muted controls width=380> <source src="./Videos/AT-4views.mp4"  type="video/mp4"> </video> |
+<div align="center">
+  <figure>
+    <video muted controls width="720">
+      <source src="./Videos/AT-4views.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Adversarial Testing case</figcaption>
+  </figure>
 </div>
 
 #### (2) Parallel Deduction Testing
 During on-road testing of autonomous driving systems, a safety operator is typically assigned to take over control when signs of hazardous or improper behavior are detected. While this intervention ensures testing safety, it also prevents the autonomous system from completing complex scenario tasks; even when the system possesses the capability to handle them, execution may be prematurely terminated. In other words, false-positive takeovers may prevent the AUT’s capability boundaries from being fully evaluated. To address this issue, the platform is equipped with parallel deduction testing capability.
-<div align=center>
-| <video muted controls width=380> <source src="./Videos/PD.mp4"  type="video/mp4"> </video> |
+
+<div align="center">
+  <figure>
+    <video muted controls width="720">
+      <source src="./Videos/PD.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Parallel deduction testing case</figcaption>
+  </figure>
 </div>
 
 ### Multi-vehicle Virtual-physical Fusion Testing
@@ -80,123 +93,44 @@ The virtual–physical fusion platform leverages comprehensive virtual and physi
 Physical vehicles are equipped with cooperative controllers that support millisecond-level communication latency, enabling real-time sharing of information such as current position, intended trajectory, and upcoming decisions. Given that V2V scenarios often involve a large number of participants while physical vehicle resources are typically limited, the platform also integrates a controllable virtual background traffic flow. This is achieved via a Redis database interface that reads and writes the states and actions of virtual cooperation vehicles in real time, allowing the system to simulate large-scale, high-density cooperative scenarios.Following the SAE J3216 standard and considering the range of variables transmitted in V2V communication, the proposed Vehicle-Vehicle Cooperation Testing framework evaluates four key levels of CDA: state sharing, intention sharing, cooperative decision-making, and cooperative control. 
 
 
-<div align=center>
-| <video muted controls width=380> <source src="./Videos/v2v-intention.mp4"  type="video/mp4"> </video> |
+<div align="center">
+  <figure>
+    <video muted controls width="720">
+      <source src="./Videos/v2v-intention.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Vehicle-vehicle cooperation with intention sharing testing case</figcaption>
+  </figure>
 </div>
 
 
-
-<div align=center>
-| <video muted controls width=380> <source src="./Videos/v2v-decision.mp4"  type="video/mp4"> </video> |
+<div align="center">
+  <figure>
+    <video muted controls width="720">
+      <source src="./Videos/v2v-decision.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Vehicle-vehicle cooperation with cooperative decision-making testing case</figcaption>
+  </figure>
 </div>
 
 
 #### (2) Vehicle-infrastructure Cooperation Testing
 The platform supports flexible configuration and combination of virtual and physical V2I testing elements, enabling the construction of special traffic event scenarios through digital twin technology and the safe, repeatable reproduction of identical testing conditions, thereby overcoming the limitations of uncontrollable events in real-road environments. Physical vehicles, RSUs, MEC edge computing units, cloud control platforms, and virtual background traffic are integrated into a unified testing system, achieving high-precision temporal synchronization of multi-source perception data and bidirectional real-time communication.
 
-<div align=center>
-| <video muted controls width=380> <source src="./Videos/v2i.mp4"  type="video/mp4"> </video> |
-</div>
-
-
-## Simulation
-
-### Comparative Evaluation of Different Methods
-Three kinds of methods that are reservation-based and reinforcement learning-based methods are designed based on the above environment, and the simulation results are compared with the proposed method. For the method in this paper, two cases are designed, respectively. 
-
-#### FIFO
-Choose First in First Out (FIFO) method as one of the reservation-based method. Specifically, only one vehicle at the same time is allowed to enter the designated area within a certain range of the intersection (in case design, the range within 10m before the stop line and the intersection conflict area). 
-<div align=center>
-| <video muted controls width=380> <source src="./vedio/FIFO.mp4"  type="video/mp4"> </video> |
-</div>
-
-#### PIDM
-Virtual platoon projection method converts the two-dimensional spatial position of a vehicle into a one-dimensional position by referring to the position of the conflict point between the two vehicles. The platoon formed after projection can calculate the longitude decision action according to the car-following model like IDM, called Virtual-IDM.
-<div align=center>
-| <video muted controls width=380> <source src="./vedio/Virtual-IDM.mp4"  type="video/mp4"> </video> |
-</div>
-
-#### singlePPO
-As for the reinforcement learning method, Proximal Policy Optimization (PPO) algorithm has high computational efficiency, can deal with continuous action space and discrete action space problems, simple implementation, wide application range. The baseline PPO algorithm provided in Stable-Baselines3 was selected as the comparison method. And PPO interact and train the model in the environment provided by highway-env.
-<div align=center>
-| <video muted controls width=380> <source src="./vedio/RL-PPO.mp4"  type="video/mp4"> </video> |
-</div>
-
-#### G-Nontwin & G-Twin
-For the method in this paper, two cases are designed, respectively, the parameters related to the weight of HDVs reward function are determined and updated by the twin game and the parameters are fixed which are always the initial ones.
-
-<div align=center>
-| <video muted controls width=380> <source src="./vedio/Proposed-Nontwin.mp4"  type="video/mp4"> </video> <video muted controls width=380> <source src="./vedio/Proposed-Intwin.mp4"  type="video/mp4"> </video> |
-</div>
-
-### Scalability Analysis with Varying Number of Vehicles
 <div align="center">
-  <figure style="display:inline-block; margin:10px;">
-    <video muted controls width="380">
-      <source src="./vedio/num-2.mp4" type="video/mp4">
+  <figure>
+    <video muted controls width="720">
+      <source src="./Videos/v2i.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-    <figcaption>(1). 2 vehicles simulation visualization </figcaption>
+    <figcaption>Vehicle-infrastructure cooperation testing cases</figcaption>
   </figure>
-
-  <figure style="display:inline-block; margin:10px;">
-    <video muted controls width="380">
-      <source src="./vedio/num-4.mp4" type="video/mp4">
-    </video>
-    <figcaption>(2). 4 vehicles simulation visualization </figcaption>
-  </figure>
-</div>
-
-<div align="center">
-  <figure style="display:inline-block; margin:10px;">
-    <video muted controls width="380">
-      <source src="./vedio/num-8.mp4" type="video/mp4">
-    </video>
-    <figcaption>(3). 8 vehicles simulation visualization</figcaption>
-  </figure>
-
-  <figure style="display:inline-block; margin:10px;">
-    <video muted controls width="380">
-      <source src="./vedio/num-12.mp4" type="video/mp4">
-    </video>
-    <figcaption>(4). 12 vehicles simulation visualization</figcaption>
-  </figure>
-</div>
-
-## Experiment
-
-### Scenario-(1) Unprotected left turn of 2 CAVs
-The first experiment involved a scenario of an unprotected left turn with two CAVs to verify the possibility of CAV cooperative algorithm deployment and application under purely CAVs. Approaching from opposite directions on a stretch of road, one vehicle proceeded straight while the other executed a left turn.
-<div align=center>
- <iframe width="640" height="640" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/2CAV-上帝/2CAV-上帝.mp4" title="2CAV-上帝" frameborder="0" allowfullscreen></iframe> 
-</div>
-
-
-<div align=center>
-| <iframe width="320" height="240" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/2CAV-hero1/2CAV-hero1.mp4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>  <iframe width="320" height="240" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/2CAV-hero3/2CAV-hero3.mp4" title="YouTube video player" frameborder="0" allowfullscreen></iframe> |
-</div>
-
-
-### Scenario-(2) Mixed traffic of 3CAV & 1HDV
-In order to verify the effectiveness of the collaborative algorithm and the twin game in the mixed traffic scenario, the second experiment was conducted in the scenario of three CAVs and one HDV. Three subjects with different driving styles were selected to complete the driving task of HDV and interact with three CAVs in the designed scenario.
-
-#### Driver1
-<div align=center>
-| <iframe width="275" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case1-上帝视角/3CAV1HV-Case1-上帝视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  <iframe width="366" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case1-HV视角/3CAV1HV-Case1-HV视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
-</div>
-
-#### Driver2
-<div align=center>
-| <iframe width="275" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case2-上帝视角/3CAV1HV-Case2-上帝视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  <iframe width="366" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case2-HV视角/3CAV1HV-Case2-HV视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
-</div>
-
-#### Driver3
-<div align=center>
-| <iframe width="275" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case3-上帝视角/3CAV1HV-Case3-上帝视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  <iframe width="366" height="275" src="https://resource.onsite.com.cn/temp/cym/cym-vedio/3CAV1HV-Case3-HV视角/3CAV1HV-Case3-HV视角.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
 </div>
 
 ## Appendix
-### Background Vehicle Model: IDM and MOBIL Models
 
+[](https://www.onsite.com.cn/)
 
 
 
