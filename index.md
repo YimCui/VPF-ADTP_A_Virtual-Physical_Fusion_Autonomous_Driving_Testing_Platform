@@ -64,12 +64,14 @@ However, a notable limitation of existing research is its predominant reliance o
 Due to the nature of adversarial testing, which explores the boundary of vehicle capabilities, real-world field tests inherently carry certain safety risks. To address this gap, this study incorporates adversarial testing capabilities within the virtual–physical fusion testing platform, fully leveraging both virtual and physical vehicles as adversaries to construct realistic, safe, and efficient adversarial environments.
 
 <div align=center>
-| <video muted controls width=380> <source src="./vedio/FIFO.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./Videos/AT-4views.mp4"  type="video/mp4"> </video> |
 </div>
 
 #### (2) Parallel Deduction Testing
 During on-road testing of autonomous driving systems, a safety operator is typically assigned to take over control when signs of hazardous or improper behavior are detected. While this intervention ensures testing safety, it also prevents the autonomous system from completing complex scenario tasks; even when the system possesses the capability to handle them, execution may be prematurely terminated. In other words, false-positive takeovers may prevent the AUT’s capability boundaries from being fully evaluated. To address this issue, the platform is equipped with parallel deduction testing capability.
-
+<div align=center>
+| <video muted controls width=380> <source src="./Videos/PD.mp4"  type="video/mp4"> </video> |
+</div>
 
 ### Multi-vehicle Virtual-physical Fusion Testing
 The virtual–physical fusion platform leverages comprehensive virtual and physical elements to build controllable and repeatable cooperative scenarios, and establishes bidirectional low-latency communication along with unified spatiotemporal synchronization, ensuring stable validation of cooperative algorithms. Based on these capabilities, the platform supports both V2V and V2I cooperation testing.
@@ -79,21 +81,21 @@ Physical vehicles are equipped with cooperative controllers that support millise
 
 
 <div align=center>
-| <video muted controls width=380> <source src="./vedio/FIFO.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./Videos/v2v-intention.mp4"  type="video/mp4"> </video> |
 </div>
 
 
 
 <div align=center>
-| <video muted controls width=380> <source src="./vedio/FIFO.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./Videos/v2v-decision.mp4"  type="video/mp4"> </video> |
 </div>
 
 
-#### (2) Vehicle-vehicle Cooperation Testing
+#### (2) Vehicle-infrastructure Cooperation Testing
 The platform supports flexible configuration and combination of virtual and physical V2I testing elements, enabling the construction of special traffic event scenarios through digital twin technology and the safe, repeatable reproduction of identical testing conditions, thereby overcoming the limitations of uncontrollable events in real-road environments. Physical vehicles, RSUs, MEC edge computing units, cloud control platforms, and virtual background traffic are integrated into a unified testing system, achieving high-precision temporal synchronization of multi-source perception data and bidirectional real-time communication.
 
 <div align=center>
-| <video muted controls width=380> <source src="./vedio/FIFO.mp4"  type="video/mp4"> </video> |
+| <video muted controls width=380> <source src="./Videos/v2i.mp4"  type="video/mp4"> </video> |
 </div>
 
 
